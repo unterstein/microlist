@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<title wicket:id="title"></title>
+<meta charset="UTF-8">
+<meta name="description" content="" />
+<script type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script type="text/javascript" src="js/kickstart.js"></script>
+<link rel="stylesheet" type="text/css" href="css/kickstart.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <a id="top-of-page"></a>
+  <div id="header">
+      <span class="icon" data-icon="F"></span> <span><wicket:message key="page.title" /></span>
+  </div>
+  <div id="wrap" class="clearfix">
+    <div id="nav">
+      <ul class="menu">
+        <li wicket:id="navigation" class="menu_index"><a wicket:id="navigationLink"></a></li>
+      </ul>
+    </div>
+    <div class="col_12">
+      <wicket:child />
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+  <entry key="html.title">The Microlist - micromata todo app</entry>
+  <entry key="page.title">Microlist - manage yourself</entry>
+  <entry key="email">E-Mail</entry>
+  <entry key="password">Password</entry>
+  <entry key="remember">remember</entry>
+  <entry key="login">Login</entry>
+  <entry key="logout">Logout</entry>
+  <entry key="register">Register</entry>
+  <entry key="error.duplicateEmail">Sorry, this E-Mail already exists.</entry>
+  <entry key="error.signInFailed">Sorry, login failed. Please try again.</entry>
+  <entry key="github.link">Fork us on github</entry>
+  <entry key="github.url">https://github.com/unterstein/microlist</entry>
+</properties>
