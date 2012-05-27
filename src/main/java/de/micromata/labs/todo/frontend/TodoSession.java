@@ -47,4 +47,8 @@ public class TodoSession extends AuthenticatedWebSession {
     public void register(User user) throws UserAlreadyExistsException {
         this.user = this.service.register(user);
     }
+
+    public User getUser() {
+        return this.user;
+    }
 }

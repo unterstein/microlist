@@ -13,4 +13,5 @@
   <entry key="error.signInFailed">Sorry, login failed. Please try again.</entry>
   <entry key="github.link">Fork us on github</entry>
   <entry key="github.url">https://github.com/unterstein/microlist</entry>
+  <entry key="projects.title">Projects</entry>
 </properties>

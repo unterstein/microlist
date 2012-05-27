@@ -10,6 +10,7 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 import de.micromata.labs.todo.frontend.AbstractTodoPage;
 import de.micromata.labs.todo.frontend.TodoApplication;
 import de.micromata.labs.todo.frontend.TodoSession;
+import de.micromata.labs.todo.frontend.navi.ProjectListPanel;
 import de.micromata.labs.todo.services.ITodoService;
 
 /**
@@ -22,6 +23,12 @@ public class HomePage extends AbstractTodoPage {
 
     public HomePage(PageParameters parameters) {
         super(parameters);
+    }
+
+    @Override
+    protected void onInitialize() {
+        super.onInitialize();
+        add(new ProjectListPanel("projectList"));
     }
 
     @Override
