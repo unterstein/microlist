@@ -36,6 +36,9 @@ public class TodoApplication extends AuthenticatedWebApplication implements Appl
         // mount pages
         mountPage("login", LoginPage.class);
         mountPage("home", HomePage.class);
+
+        // strip <wicket:tags />
+        getMarkupSettings().setStripWicketTags(true);
     }
 
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {

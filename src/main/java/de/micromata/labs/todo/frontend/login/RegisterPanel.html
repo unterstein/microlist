@@ -3,17 +3,21 @@
 <head></head>
 <body>
   <wicket:panel>
-    <fieldset>
+    <form class="form-horizontal" wicket:id="form">
+      <fieldset>
       <legend><wicket:message key="register" /></legend>
-      <form class="span12 vertical" wicket:id="form">
-        <div class="notice error" wicket:id="feedback"></div>
-        <div class="span3"><wicket:message key="email" />*:</div>
-        <div class="span9"><input type="text" wicket:id="email" /></div>
-        <div class="span3"><wicket:message key="password" />*:</div>
-        <div class="span9"><input type="password" wicket:id="password" /></div>
-        <button wicket:id="submit" type="submit"><wicket:message key="register" /></button>
-      </form>
-    </fieldset>
+        <div class="alert alert-error" wicket:id="feedback"></div>
+                <div class="control-group">
+          <label class="control-label"><wicket:message key="email" />*:</label>
+          <div class="controls"><input type="text" wicket:id="email" /></div>
+        </div>
+        <div class="control-group">
+          <label class="control-label"><wicket:message key="password" />*:</label>
+          <div class="controls"><input type="password" wicket:id="password" /></div>
+        </div>
+        <button wicket:id="submit" type="submit" class="btn btn-primary btn-large"><wicket:message key="register" /></button>
+      </fieldset>
+    </form>
   </wicket:panel>
 </body>
 </html>
