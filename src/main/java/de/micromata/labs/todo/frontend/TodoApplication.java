@@ -9,9 +9,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-import de.micromata.labs.todo.frontend.page.AbstractTodoPage;
-import de.micromata.labs.todo.frontend.page.HomePage;
-import de.micromata.labs.todo.frontend.page.LoginPage;
+import de.micromata.labs.todo.frontend.login.LoginPage;
 
 /**
  * 

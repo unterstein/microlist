@@ -1,4 +1,4 @@
-package de.micromata.labs.todo.frontend.page;
+package de.micromata.labs.todo.frontend;
 
 import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.markup.html.WebMarkupContainer;

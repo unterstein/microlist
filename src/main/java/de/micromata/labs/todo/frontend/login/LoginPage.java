@@ -1,12 +1,11 @@
-package de.micromata.labs.todo.frontend.page;
+package de.micromata.labs.todo.frontend.login;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-import de.micromata.labs.todo.frontend.login.LoginPanel;
-import de.micromata.labs.todo.frontend.login.RegisterPanel;
+import de.micromata.labs.todo.frontend.AbstractTodoPage;
 
 /**
  * 

@@ -1,4 +1,4 @@
-package de.micromata.labs.todo.frontend.page;
+package de.micromata.labs.todo.frontend;
 
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.WebMarkupContainer;
@@ -7,8 +7,6 @@ import org.apache.wicket.markup.repeater.RepeatingView;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-import de.micromata.labs.todo.frontend.TodoApplication;
-import de.micromata.labs.todo.frontend.TodoSession;
 import de.micromata.labs.todo.services.ITodoService;
 
 /**
