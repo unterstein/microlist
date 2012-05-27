@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 import de.micromata.labs.todo.frontend.login.LoginPage;
+import de.micromata.labs.todo.frontend.todolist.HomePage;
 
 /**
  * 
