@@ -1,32 +1,71 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
 <head>
+<meta charset="utf-8">
 <title wicket:id="title"></title>
-<meta charset="UTF-8">
-<meta name="description" content="" />
-<script type="text/javascript"
-  src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<script type="text/javascript" src="js/kickstart.js"></script>
-<link rel="stylesheet" type="text/css" href="css/kickstart.css" />
-<link rel="stylesheet" type="text/css" href="style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="/css/bootstrap.css" rel="stylesheet">
+<link href="/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Le fav and touch icons -->
+<!-- <link rel="shortcut icon" href="/ico/favicon.ico"> -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" -->
+<!--   href="/ico/apple-touch-icon-144-precomposed.png"> -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" -->
+<!--   href="/ico/apple-touch-icon-114-precomposed.png"> -->
+<!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" -->
+<!--   href="/ico/apple-touch-icon-72-precomposed.png"> -->
+<!-- <link rel="apple-touch-icon-precomposed" -->
+<!--   href="/ico/apple-touch-icon-57-precomposed.png"> -->
 </head>
-<body>
-  <a id="top-of-page"></a>
-  <div id="header">
-      <span class="icon" data-icon="F"></span> <span><wicket:message key="page.title" /></span>
+
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse"
+          data-target=".nav-collapse"> <span class="icon-bar"></span>
+          <span class="icon-bar"></span> <span class="icon-bar"></span>
+        </a> <a class="brand" href="./index.html">Bootstrap</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li wicket:id="navigation" class="menu_index"><a
+              wicket:id="navigationLink"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div id="wrap" class="clearfix">
-    <div id="nav">
-      <ul class="menu">
-        <li wicket:id="navigation" class="menu_index"><a wicket:id="navigationLink"></a></li>
-      </ul>
-    </div>
-    <div class="col_12">
-      <wicket:child />
-    </div>
+
+  <div class="container">
+    <header class="jumbotron subhead" id="overview">
+      <h1>
+        <wicket:message key="page.title" />
+      </h1>
+    </header>
+
+    <wicket:child />
+    <!-- Footer
+      ================================================== -->
+    <footer class="footer">
+      <p class="pull-right">
+        <a href="#">Back to top</a>
+      </p>
+      <p>blubb</p>
+    </footer>
 
   </div>
-
+  <!-- /container -->
 </body>
 </html>
