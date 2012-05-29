@@ -38,7 +38,6 @@
         class="org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter">
         <property name="showSql" value="true" />
         <property name="generateDdl" value="true" />
-        <!-- <property name="database" value="MYSQL" /> -->
       </bean>
     </property>
   </bean>
