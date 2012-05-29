@@ -48,7 +48,7 @@ public class User extends AbstractTodoBean {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Override
     public Long getId() {
         return this.id;
