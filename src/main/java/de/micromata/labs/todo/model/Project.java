@@ -23,7 +23,13 @@ public class Project extends AbstractTodoBean {
     private User user;
     private Long id;
 
+    public Project(String name) {
+        this();
+        this.name = name;
+    }
+
     public Project() {
+
     }
 
     @OneToMany(mappedBy = "project")

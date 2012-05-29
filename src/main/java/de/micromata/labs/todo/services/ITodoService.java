@@ -40,6 +40,10 @@ public interface ITodoService extends Serializable {
 
     Project getProject(Long projectId);
 
+    void addProject(User user, Project project);
+    
+    void editProject(Project project);
+
     // ----------------------------------
     // ----------------------------------
     // Tasks

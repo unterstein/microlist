@@ -14,4 +14,6 @@
   <entry key="github.link">Fork us on github</entry>
   <entry key="github.url">https://github.com/unterstein/microlist</entry>
   <entry key="projects.title">Projects</entry>
+  <entry key="project.add">Add Project</entry>
+  <entry key="project.defaultName">New Project</entry>
 </properties>

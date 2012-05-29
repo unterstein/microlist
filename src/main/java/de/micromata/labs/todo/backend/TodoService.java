@@ -70,6 +70,24 @@ public class TodoService implements ITodoService {
     }
 
     @Override
+    public void addProject(User user, Project project) {
+        if (user == null || project == null) {
+            return;
+        }
+        User userFromDb = this.userRepository.findOne(user.getId());
+        project.setUser(userFromDb);
+        this.projectRepository.save(project);
+    }
+
+    @Override
+    public void editProject(Project project) {
+        if (project == null) {
+            return;
+        }
+        this.projectRepository.save(project);
+    }
+
+    @Override
     public List<Task> getTasks(User user) {
         return this.taskRepository.findByUser(user);
     }
@@ -98,15 +116,7 @@ public class TodoService implements ITodoService {
     public void editTask(Task task) {
         if (task == null)
             return;
-        Task taskFromDb = this.taskRepository.findOne(task.getId());
-        Project projectFromDb = null;
-        if (task.getProject() != null) {
-            projectFromDb = this.projectRepository.findOne(task.getProject().getId());
-        }
-        taskFromDb.setDueDate(task.getDueDate());
-        taskFromDb.setFinished(task.isFinished());
-        taskFromDb.setProject(projectFromDb);
-        taskFromDb.setTitle(task.getTitle());
+        this.taskRepository.save(task);
     }
 
     @Override
