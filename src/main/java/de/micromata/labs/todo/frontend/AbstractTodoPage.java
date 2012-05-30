@@ -30,6 +30,7 @@ public abstract class AbstractTodoPage extends WebPage {
         RepeatingView navigation = new RepeatingView("navigation");
         add(navigation);
         buildInteralNavigation(navigation, "navigationLink");
+        add(new BookmarkablePageLink<>("pageLink", TodoApplication.get().getHomePage()));
     }
 
     private void buildInteralNavigation(RepeatingView navigation, String linkWicketId) {
