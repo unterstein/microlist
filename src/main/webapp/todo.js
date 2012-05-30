@@ -1,30 +1,33 @@
 ;(function($) {
-    $.fn.setCursorPosition = function(pos) {
-        if ($(this).get(0).setSelectionRange) {
-            $(this).get(0).setSelectionRange(pos, pos);
-        } else if ($(this).get(0).createTextRange) {
-            var range = $(this).get(0).createTextRange();
-            range.collapse(true);
-            range.moveEnd('character', pos);
-            range.moveStart('character', pos);
-            range.select();
-        }
+    $.fn.setCursorPosition = function(position){
+        if(this.length == 0) return this;
+        return $(this).setSelection(position, position);
     };
 
-    $.fn.selectAll = function() {
-        if ($(this).get(0).setSelectionRange) {
-            $(this).get(0).setSelectionRange(0, pos);
-        } else if ($(this).get(0).createTextRange) {
-            var range = $(this).get(0).createTextRange();
+    $.fn.setSelection = function(selectionStart, selectionEnd) {
+        if(this.length == 0) return this;
+        input = this[0];
+
+        if (input.createTextRange) {
+            var range = input.createTextRange();
             range.collapse(true);
-            range.moveEnd('character', pos);
-            range.moveStart('character', 0);
+            range.moveEnd('character', selectionEnd);
+            range.moveStart('character', selectionStart);
             range.select();
+        } else if (input.setSelectionRange) {
+            input.focus();
+            input.setSelectionRange(selectionStart, selectionEnd);
         }
+
+        return this;
     };
 
-    $.fn.setLastCursorPosition = function() {
-        $(this).setCursorPosition($(this).val().length);
+    $.fn.focusEnd = function(){
+        this.setCursorPosition(this.val().length);
+    };
+
+    $.fn.selectAll = function(){
+        this.setSelection(0, this.val().length);
     };
 })(jQuery);
 
