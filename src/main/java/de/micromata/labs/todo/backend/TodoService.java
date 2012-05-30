@@ -86,6 +86,11 @@ public class TodoService implements ITodoService {
     }
 
     @Override
+    public void deleteProject(Project project) {
+        this.projectRepository.delete(project);
+    }
+
+    @Override
     public List<Task> getTasks(User user) {
         return this.taskRepository.findByUser(user);
     }

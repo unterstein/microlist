@@ -67,6 +67,13 @@ public class ProjectListPanel extends Panel {
             };
             editableLabel.setOutputMarkupId(true);
             repeatingComponent.add(editableLabel);
+            repeatingComponent.add(new AjaxLink<Void>("delete") {
+                @Override
+                public void onClick(AjaxRequestTarget target) {
+                    ProjectListPanel.this.service.deleteProject(project);
+                    target.add(ProjectListPanel.this);
+                }
+            });
             repeatingComponent.add(new AjaxEventBehavior("onClick") {
                 @Override
                 protected void onEvent(AjaxRequestTarget target) {

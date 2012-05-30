@@ -44,6 +44,8 @@ public interface ITodoService extends Serializable {
     
     void editProject(Project project);
 
+    void deleteProject(Project project);
+
     // ----------------------------------
     // ----------------------------------
     // Tasks
