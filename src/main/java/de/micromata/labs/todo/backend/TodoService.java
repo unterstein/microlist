@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import de.micromata.labs.todo.exceptions.UserAlreadyExistsException;
 import de.micromata.labs.todo.model.Project;
@@ -50,7 +49,6 @@ public class TodoService implements ITodoService {
         return this.userRepository.findOne(userId);
     }
 
-    @Transactional
     @Override
     public User register(User user) throws UserAlreadyExistsException {
         if (this.userRepository.findOneByEmail(user.getEmail()) != null) {
