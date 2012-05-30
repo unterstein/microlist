@@ -2,6 +2,8 @@
  * Micromata
  */
 body {
+  padding-top: 60px;
+  padding-bottom: 40px;
   background: url(bg.png) top center no-repeat;
 }
 
