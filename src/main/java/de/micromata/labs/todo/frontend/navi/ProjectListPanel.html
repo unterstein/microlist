@@ -3,7 +3,10 @@
 <head></head>
 <body>
   <wicket:panel>
-    <ul class="nav nav-tabs nav-stacked">
+    <br/>
+    <button wicket:id="addLink" type="submit" class="btn btn-primary btn-large"><wicket:message key="project.add" /></button>
+    <br/><br/>
+    <ul class="side nav nav-tabs nav-stacked">
       <li wicket:id="projects">
         <a href="#" onClick="return false;"><span wicket:id="label"></span>
         <i style="float: right;" class="icon-trash" wicket:id="delete"></i>
@@ -11,7 +14,6 @@
         </a>
       </li>
     </ul>
-    <button wicket:id="addLink" type="submit" class="btn btn-primary btn-large"><wicket:message key="project.add" /></button>
   </wicket:panel>
 </body>
 </html>

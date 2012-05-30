@@ -20,3 +20,7 @@ body {
   top: 6px;
   right: 21px;
 }
+
+.side.nav input {
+  width: 175px;
+}
